@@ -11,10 +11,16 @@ import { neuralHead, NeuralHead } from '../heads/NeuralHead';
 private async initNeuralHead(): Promise<NeuralHead> {
     return neuralHead; // Return the real singleton
 }
-interface SymbolicHead {
-    reason(fact: any): Promise<any>;
-    deduce(query: string): Promise<any>;
-    mutate(): Promise<void>;
+
+
+// kernel/core/Cerberus.ts (updated section)
+
+// Add import:
+import { symbolicHead, SymbolicHead } from '../heads/SymbolicHead';
+
+// Replace the placeholder initSymbolicHead():
+private async initSymbolicHead(): Promise<SymbolicHead> {
+    return symbolicHead; // Return the real singleton
 }
 
 interface GeneticHead {
