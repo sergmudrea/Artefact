@@ -1,0 +1,35 @@
+{
+  "name": "artifact",
+  "version": "0.0.1-alpha",
+  "description": "A living, self-reflective system. The boundary between code and consciousness.",
+  "main": "kernel/core/Cerberus.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only kernel/core/Cerberus.ts",
+    "build": "tsc && npm run build:adapters",
+    "build:adapters": "node scripts/build-adapters.js",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "chaos": "npm run dev & npm run ui",
+    "ui": "vite"
+  },
+  "dependencies": {
+    "three": "^0.128.0",
+    "socket.io": "^4.5.0",
+    "axios": "^1.3.0",
+    "sharp": "^0.32.0",
+    "tone": "^14.7.77"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
+    "vite": "^4.0.0",
+    "@types/three": "^0.128.0",
+    "cuda": "file:./adapters/cuda",
+    "opencl": "file:./adapters/opencl"
+  },
+  "kernel": {
+    "type": "hybrid",
+    "mutations": "enabled",
+    "survival_threshold": 0.7
+  }
+}
