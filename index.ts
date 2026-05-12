@@ -1,8 +1,8 @@
 // kernel/heads/index.ts
-// Export all three heads (Neural, Symbolic, Genetic)
+// Export all three heads
 
 export { NeuralHead, neuralHead } from './NeuralHead';
-// export { SymbolicHead, symbolicHead } from './SymbolicHead'; // Step 4
+export { SymbolicHead, symbolicHead } from './SymbolicHead';
 // export { GeneticHead, geneticHead } from './GeneticHead';     // Step 5
 
 export interface Head {
