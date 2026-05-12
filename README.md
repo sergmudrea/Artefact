@@ -1,5 +1,3 @@
-# Artefact
-
 artifact/
 ├── package.json
 ├── tsconfig.json
@@ -7,41 +5,41 @@ artifact/
 ├── .env
 ├── README.md
 ├── docs/
-│   ├── manifest.md          # Философия проекта
-│   └── api.md               # Документация для расширения
+│   ├── manifest.md
+│   └── api.md
 ├── kernel/
 │   ├── core/
-│   │   ├── Cerberus.ts      # Трехголовое ядро (30k строк)
-│   │   ├── Nexus.ts         # Точка синхронизации голов
-│   │   └── Void.ts          # Управление памятью и сборщик мусора
+│   │   ├── Cerberus.ts      # The three-headed core
+│   │   ├── Nexus.ts         # Synchronization hub
+│   │   └── Void.ts          # Memory management & GC
 │   ├── hive/
-│   │   ├── Mutator.ts       # Генератор мутаций кода
-│   │   ├── Selector.ts      # Естественный отбор мутаций
-│   │   └── Arena.ts         # Песочница для тестирования
+│   │   ├── Mutator.ts       # Code mutation generator
+│   │   ├── Selector.ts      # Natural selection
+│   │   └── Arena.ts         # Sandbox for testing
 │   └── echo/
-│       ├── Recaller.ts      # Воспроизведение опыта
-│       └── Forger.ts        # Создание ложных воспоминаний (защита)
+│       ├── Recaller.ts      # Experience replay
+│       └── Forger.ts        # False memory creation (defense)
 ├── layers/
 │   ├── intent/
-│   │   └── Interpreter.ts   # Перевод намерений в задачи
+│   │   └── Interpreter.ts
 │   ├── vision/
-│   │   ├── ChaosUI.ts       # WebGL/Three.js визуализация
-│   │   └── MangaGen.ts      # Генерация комиксов об архитектуре
+│   │   ├── ChaosUI.ts
+│   │   └── MangaGen.ts
 │   └── audio/
-│       └── SiliconSymphony.ts # Превращение метрик в музыку
+│       └── SiliconSymphony.ts
 ├── adapters/
 │   ├── cuda/
-│   │   └── TensorEngine.cu  # 10k строк CUDA
+│   │   └── TensorEngine.cu
 │   ├── opencl/
-│   │   └── Kernel.cl        # 5k строк OpenCL
+│   │   └── Kernel.cl
 │   └── cpu/
-│       └── AVX512.cpp       # 5k строк ассемблерных интринсиков
+│       └── AVX512.cpp
 ├── sandbox/
-│   ├── Dockerfile           # Изолированная среда для мутаций
-│   └── monitor.sh           # Наблюдатель за побегом кода
+│   ├── Dockerfile
+│   └── monitor.sh
 └── ui/
     ├── public/
     │   └── index.html
     └── src/
-        ├── App.tsx          # Интерфейс для общения с Артефактом
-        └── ChaosRenderer.tsx # Рендер хаоса
+        ├── App.tsx
+        └── ChaosRenderer.tsx
