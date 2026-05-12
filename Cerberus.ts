@@ -5,12 +5,12 @@ import { Nexus, NexusMessage } from './Nexus';
 import { Void } from './Void';
 
 // Placeholder interfaces for the three heads (to be implemented in later steps)
-interface NeuralHead {
-    think(input: any): Promise<any>;
-    learn(experience: any): Promise<void>;
-    mutate(): Promise<void>;
-}
+import { neuralHead, NeuralHead } from '../heads/NeuralHead';
 
+// Inside Cerberus class, modify initNeuralHead():
+private async initNeuralHead(): Promise<NeuralHead> {
+    return neuralHead; // Return the real singleton
+}
 interface SymbolicHead {
     reason(fact: any): Promise<any>;
     deduce(query: string): Promise<any>;
